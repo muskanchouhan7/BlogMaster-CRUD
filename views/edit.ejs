@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Blog</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body> 
+    <h1>Edit Blog</h1>
+    <form
+      action="/posts/<%= post._id %>?_method=PUT"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      <!-- img input - added enctype  -->
+
+      <input type="text" name="post[title]" value="<%= post.title %>" />
+      <textarea name="post[content]"><%= post.content %></textarea>
+
+      <!-- input image -->
+      <input type="file" name="image" accept="image/*" />
+      <input type="hidden" name="existingImage" value="<%= post.image %>" />
+
+      <button type="submit">Update Blog</button>
+    </form>
+    <!-- <a href="/">Go Back</a> -->
+    <a href="/" id="Goback-btn">Go Back</a>
+  </body>
+</html>
+<!-- 
+<a href="alink">write anything you wanna display on the screen </a>
+#include stdio.h
+#include conio.h
+int a=1, b=1;
+scanf(i forgot how to scan the integers infact u)
+int sum=a+b;
+printf(sum);
+scanf()
+-->

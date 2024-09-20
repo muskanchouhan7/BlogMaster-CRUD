@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Blog</title>
+</head>
+<body>
+    <h1>All Blogs</h1>
+    <!-- <a href="/posts/new" class="newblog">Create New Blog +</a> -->
+    <a href="/posts/new" class="cta">
+        <span>Create New Blog</span>
+        <svg width="13px" height="10px" viewBox="0 0 13 10">
+          <path d="M1,5 L11,5"></path>
+          <polyline points="8 1 12 5 8 9"></polyline>
+        </svg>
+    </a>
+
+    <div class="card-container">
+        <% posts.forEach(post => { %>
+            <div class="card">
+                <% if (post.image) { %>
+                    <a href="/posts/<%= post._id %>"><img  src="<%= post.image %>" alt="<%= post.title %>" style="border-radius: 50%; width: 180px; height: 180px; object-fit: cover;"></a>
+                <% } %>
+                <h2><a href="/posts/<%= post._id %>"><%= post.title %></a></h2>
+                <% if (post.content) { %>
+                    <p><%= post.content.substring(0, 100) %>...</p>
+                <% } %>
+                <a href="/posts/<%= post._id %>"><button><span>Read More</span></button></a>
+            </div>
+        <% }); %>
+    </div>
+</body>
+</html>

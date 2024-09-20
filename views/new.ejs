@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Blog</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Create New Blog</h1>
+    <form action="/posts" method="POST" enctype="multipart/form-data"> 
+        <!-- img input - added enctype -->
+        <input type="text" name="post[title]" placeholder="Title">
+        <textarea name="post[content]" placeholder="Content"></textarea>
+
+        <!-- img input -->
+        <input type="file" name="image" accept="image/*" required>
+
+        <button type="submit">Create Blog</button>
+    </form>
+    <a href="/" id="Goback-btn">Go Back</a>
+</body>
+</html>
