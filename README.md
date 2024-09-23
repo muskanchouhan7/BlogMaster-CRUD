@@ -1,5 +1,5 @@
-# Blog-MongoDB
-Blog-MongoDB is a full-featured blog management system built using Node.js and MongoDB. It supports CRUD operations on blog posts and includes image upload functionality for enriching content.
+# BlogMaster
+BlogMaster is a full-featured blog management system built using Node.js and MongoDB. It supports CRUD operations on blog posts and includes image upload functionality for enriching content.
 
 ## Features
 - Create, Read, Update, Delete: Perform full CRUD operations on blog posts.
